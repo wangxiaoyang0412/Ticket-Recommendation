@@ -20,6 +20,7 @@ import entity.Item;
 
 /**
  * Servlet implementation class ItemHistory
+ * @author xiaoyangwang
  */
 @WebServlet("/history")
 public class ItemHistory extends HttpServlet {
@@ -36,6 +37,7 @@ public class ItemHistory extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
@@ -64,7 +66,8 @@ public class ItemHistory extends HttpServlet {
 	/**
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
-      protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      @Override
+	  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 DBConnection connection = DBConnectionFactory.getConnection();
 try {
 	// allow access only if session exists
@@ -94,7 +97,8 @@ try {
     /**
      * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
     */
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 DBConnection connection = DBConnectionFactory.getConnection();
 try {
 	// allow access only if session exists

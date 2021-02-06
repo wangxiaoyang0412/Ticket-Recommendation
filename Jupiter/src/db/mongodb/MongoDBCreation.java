@@ -9,6 +9,9 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.IndexOptions;
 
+/**
+ * @author xiaoyangwang
+ */
 public class MongoDBCreation {
   // Run as Java application to create MongoDB collections with index.
   public static void main(String[] args) throws ParseException {

@@ -5,6 +5,9 @@ import java.util.Set;
 
 import entity.Item;
 
+/**
+ * @author xiaoyangwang
+ */
 public interface DBConnection {
 	/**
 	 * Close the connection.
@@ -33,7 +36,7 @@ public interface DBConnection {
 	 * @param userId
 	 * @return itemIds
 	 */
-	public Set<String> getFavoriteItemIds(String userId);
+	Set<String> getFavoriteItemIds(String userId);
 
 	/**
 	 * Get the favorite items for a user.
@@ -41,7 +44,7 @@ public interface DBConnection {
 	 * @param userId
 	 * @return items
 	 */
-	public Set<Item> getFavoriteItems(String userId);
+	Set<Item> getFavoriteItems(String userId);
 
 	/**
 	 * Gets categories based on item id
@@ -53,7 +56,7 @@ public interface DBConnection {
 
 	/**
 	 * Search items near a geolocation and a term (optional).
-	 * 
+	 *
 	 * @param userId
 	 * @param lat
 	 * @param lon

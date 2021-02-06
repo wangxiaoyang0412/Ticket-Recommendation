@@ -17,6 +17,9 @@ import entity.Item.ItemBuilder;
 import external.TicketMasterAPI;
 
 
+/**
+ * @author xiaoyangwang
+ */
 public class MongoDBConnection implements DBConnection {
 
 	private static MongoDBConnection instance;
@@ -60,7 +63,7 @@ public class MongoDBConnection implements DBConnection {
 		if (db == null) {
 			return;
 		}
-		db.getCollection("users").updateOne(eq("user_id", userId), 
+		db.getCollection("users").updateOne(eq("user_id", userId),
 				new Document("$pullAll", new Document("favorite", itemIds)));
 	}
 
